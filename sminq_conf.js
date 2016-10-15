@@ -6,7 +6,7 @@ exports.config = {
 
    framework: 'jasmine',
    seleniumAddress: 'http://localhost:4444/wd/hub',
-     specs: ['03_Landing/3_1_locality_search.js'
+     specs: ['03_Home/3_2_doctor_search.js'
    ],
 
    /*=============================================>>>>>
