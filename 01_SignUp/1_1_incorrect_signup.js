@@ -16,7 +16,7 @@ describe("Sign Up: Incorrect", function () {
 
       var mobile = 7000000000;
 
-      var create_btn = element(by.xpath('/html/body/div[2]/div/div/div[2]/div/div/div[1]/div/form/div[5]/button'));
+      var create_btn = element(by.xpath('//*[@id="my-wrapper"]/div[2]/div/div/div[2]/div/div/div[1]/div/form/div[5]/button'));
 
       expect(create_btn.isEnabled()).toBeFalsy();
 
