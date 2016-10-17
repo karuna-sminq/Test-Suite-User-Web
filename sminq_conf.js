@@ -6,7 +6,7 @@ exports.config = {
 
    framework: 'jasmine',
    seleniumAddress: 'http://localhost:4444/wd/hub',
-     specs: ['01_SignUp/1_1_incorrect_signup.js',
+     specs: ['01_SignUp/1_2_correct_signup.js',
    ],
 
    /*=============================================>>>>>
@@ -14,7 +14,7 @@ exports.config = {
    ===============================================>>>>>*/
 
   /**
-   * '01_SignUp/1_1_incorrect_signup.js',
+   * '01_SignUp/1_1_incorrect_signup.js','01_SignUp/1_2_correct_signup.js'
    * '03_Home/3_1_locality_search.js','03_Home/3_2_doctor_search.js',
    */
 
