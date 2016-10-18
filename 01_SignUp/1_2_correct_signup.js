@@ -14,7 +14,7 @@ describe("Sign Up: Correct", function() {
 
         var name = "QATest2";
 
-        var mobile = 7215000000;
+        var mobile = 7216000000;
 
         var create_btn = element(by.xpath('/html/body/div/div[2]/div/div/div[2]/div/div/div[1]/div/form/div[5]/button'));
 

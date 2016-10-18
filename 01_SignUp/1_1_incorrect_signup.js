@@ -33,6 +33,8 @@ describe("Sign Up: Incorrect", function () {
 
       browser.sleep(sleep_time);
 
+      // browser.pause();
+
   });
 
 });
