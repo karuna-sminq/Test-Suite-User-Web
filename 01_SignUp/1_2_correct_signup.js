@@ -14,9 +14,9 @@ describe("Sign Up: Correct", function () {
 
       var name = "QATest2";
 
-      var mobile = 7200000000;
+      var mobile = 7214000000;
 
-      var create_btn = element(by.xpath('//*[@id="my-wrapper"]/div[2]/div/div/div[2]/div/div/div[1]/div/form/div[5]/button'));
+      var create_btn = element(by.xpath('/html/body/div/div[2]/div/div/div[2]/div/div/div[1]/div/form/div[5]/button'));
 
       expect(create_btn.isEnabled()).toBeFalsy();
 
@@ -24,10 +24,14 @@ describe("Sign Up: Correct", function () {
 
       element(by.model('user.phone')).sendKeys(mobile);
 
+      browser.sleep(sleep_time);
+
       //T&C not checked -> Button should be disabled
       expect(create_btn.isEnabled()).toBeFalsy();
 
       create_btn.click();
+
+      browser.sleep(sleep_time);
 
       //Enter OTP
       element(by.model('user.otp')).sendKeys(989898);
@@ -41,11 +45,13 @@ describe("Sign Up: Correct", function () {
 
       browser.sleep(sleep_time);
 
-      element(by.id('//*[@id="my-wrapper"]/div[2]/div/div/div[2]/div/div/div[2]/div/form/div[3]/button')).click();
+      element(by.xpath('/html/body/div/div[2]/div/div/div[2]/div/div/div[1]/div/form/div[3]/button')).click();
 
       browser.sleep(sleep_time);
 
       expect(element(by.id('toast-container')).getText()).toContain('Registered');
+
+      browser.sleep(sleep_time);
 
   });
 
