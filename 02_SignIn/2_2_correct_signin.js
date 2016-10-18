@@ -4,9 +4,9 @@ describe("Sign In: Correct", function () {
 
   it("Existing user should be able to sign in", function () {
 
-      browser.get("http://localhost:9000/#/");
-
-      browser.sleep(sleep_time);
+      // browser.get("http://localhost:9000/#/");
+      //
+      // browser.sleep(sleep_time);
 
       element(by.css('a[href="#/login"]')).click();
 
@@ -38,6 +38,8 @@ describe("Sign In: Correct", function () {
       login_btn.click();
 
       expect(element(by.id('toast-container')).getText()).toContain('Logged in');
+
+      browser.sleep(sleep_time);
 
   });
 

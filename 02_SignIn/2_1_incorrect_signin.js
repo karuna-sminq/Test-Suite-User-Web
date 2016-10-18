@@ -4,9 +4,9 @@ describe("Sign In: Incorrect", function () {
 
   it("New user should not be able to sign in without signing up first", function () {
 
-      browser.get("http://localhost:9000/#/");
-
-      browser.sleep(sleep_time);
+      // browser.get("http://localhost:9000/#/");
+      //
+      // browser.sleep(sleep_time);
 
       element(by.css('a[href="#/login"]')).click();
 
@@ -17,7 +17,7 @@ describe("Sign In: Incorrect", function () {
 
       browser.sleep(sleep_time);
 
-      var mobile = 7242224200;
+      var mobile = 7242234200;
 
       var pin = 1111;
 
@@ -35,6 +35,8 @@ describe("Sign In: Incorrect", function () {
       login_btn.click();
 
       expect(element(by.id('toast-container')).getText()).toContain('does not exist');
+
+      browser.sleep(sleep_time);
 
   });
 

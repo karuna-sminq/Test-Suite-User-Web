@@ -1,6 +1,6 @@
 describe("Sign Up: Incorrect", function () {
 
-  var sleep_time = 3000;
+  var sleep_time = 5000;
 
   it("Existing user should not be able to re-register", function () {
 
@@ -30,6 +30,8 @@ describe("Sign Up: Incorrect", function () {
       create_btn.click();
 
       expect(element(by.id('toast-container')).getText()).toContain('exists');
+
+      browser.sleep(sleep_time);
 
   });
 

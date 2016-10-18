@@ -4,9 +4,9 @@ describe("Home Page:", function () {
 
     var sleep_time = 3000;
 
-    browser.get("http://localhost:9000/#/");
-
-    browser.sleep(sleep_time);
+    // browser.get("http://localhost:9000/#/");
+    //
+    // browser.sleep(sleep_time);
 
     element(by.model('search.locality')).click();
 

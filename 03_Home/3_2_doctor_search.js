@@ -4,7 +4,7 @@ describe("Home Page:", function() {
 
     it("Doctor/Clinic Name Search should search through", function() {
 
-      browser.get("http://localhost:9000/#/");
+      // browser.get("http://localhost:9000/#/");
 
       var doctor = "test";
 
