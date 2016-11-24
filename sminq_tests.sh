@@ -3,7 +3,7 @@
 echo '''
 Copyright (C) 2016 Sminq India Solutions Pvt Ltd.
 Created on 2016-10-10
-Updated on 2016-10-18
+Updated on 2016-11-24
 
 ============================================================
      _______..___  ___.  __  .__   __.   ______
@@ -19,7 +19,7 @@ Updated on 2016-10-18
 '''
 
 echo "================================="
-echo "Sminq User Web v1.0.0 ..."
+echo "Sminq User Web v19 (Beta) ..."
 echo "Running Test Suite v1.0.0 ..."
 echo "================================="
 
@@ -31,7 +31,6 @@ start=`date +%s`
 
 #Run scripts
 protractor sminq_conf.js
-# python add_sminq.py
 
 #Copy ./reports folder
 mkdir -p test_reports/test_$now

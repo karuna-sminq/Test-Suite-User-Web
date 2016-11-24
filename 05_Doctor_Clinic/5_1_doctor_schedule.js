@@ -16,6 +16,8 @@ describe("Doctor/Clinic Page: ", function() {
 
                 var queue_name = element(by.id('queue-name')).getText();
 
+                var today_slots = element.all(by.repeater('slot in queue.todaysSlots'));
+
                 expect(element(by.id('see-schedule-button')).isPresent()).toBeTruthy();
 
                 //See Schedule
@@ -26,6 +28,22 @@ describe("Doctor/Clinic Page: ", function() {
                 var q_name = element(by.xpath('/html/body/div/div[2]/div/div/div[2]/div[1]/div/h4')).getText();
 
                 expect(queue_name).toEqual(q_name);
+
+                // //Check for Today's Slot Groups
+                // var timeslot_group = element(by.css('.timeslot-title.ng-binding')).getText();
+                //
+                // timeslot_group.getText().then(function(str) {
+                //   var patt = /[^Timeslots: ]/;
+                //   var res = patt.exec(str);
+                //   console.log(res);
+                //
+                //   expect(today_slots).toContain(res);
+                // });
+
+                // var str = "The best things in life are free";
+                // var patt = new RegExp("e");
+                // var res = patt.exec(str);
+                //
 
             }
 
