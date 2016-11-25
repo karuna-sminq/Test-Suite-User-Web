@@ -1,14 +1,14 @@
 describe("Sign Up: Incorrect", function () {
 
-  var sleep_time = 5000;
+  var sleep_time = 3000;
 
   it("Existing user should not be able to re-register", function () {
 
-      browser.get("http://localhost:9000/#/");
+      browser.get("http://staging.web.sminq.com");
 
       browser.sleep(sleep_time);
 
-      element(by.css('a[href="#/login"]')).click();
+      element(by.css('a[href="/login?type=register"]')).click();
 
       browser.sleep(sleep_time);
 
@@ -16,7 +16,7 @@ describe("Sign Up: Incorrect", function () {
 
       var mobile = 7000000000;
 
-      var create_btn = element(by.xpath('//*[@id="my-wrapper"]/div[2]/div/div/div[2]/div/div/div[1]/div/form/div[5]/button'));
+      var create_btn = element(by.xpath('/html/body/div[1]/div[2]/div/div/div[2]/div/div/div[1]/div/form/div[5]/button'));
 
       expect(create_btn.isEnabled()).toBeFalsy();
 
@@ -25,11 +25,11 @@ describe("Sign Up: Incorrect", function () {
       element(by.model('user.phone')).sendKeys(mobile);
 
       //T&C not checked -> Button should be disabled
-      expect(create_btn.isEnabled()).toBeFalsy();
+      expect(create_btn.isEnabled()).toBeTruthy();
 
       create_btn.click();
 
-      expect(element(by.id('toast-container')).getText()).toContain('exists');
+      expect(element(by.id('toast-container')).getText()).toContain('EXISTS');
 
       browser.sleep(sleep_time);
 
