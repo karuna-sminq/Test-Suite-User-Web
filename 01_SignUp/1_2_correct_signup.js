@@ -4,21 +4,19 @@ describe("Sign Up: Correct", function() {
 
     it("New User should be able to register for a new account", function() {
 
-        browser.get("http://staging.web.sminq.com");
+        // browser.get("http://staging.web.sminq.com");
+        //
+        // browser.sleep(sleep_time);
 
-        browser.sleep(sleep_time);
-
-        element(by.css('a[href="/login?type=register"]')).click();
+        element(by.xpath('/html/body/div[1]/div[2]/div/div/div[2]/div/ul/li[1]/a')).click();
 
         browser.sleep(sleep_time);
 
         var name = "QATest2";
 
-        var mobile = 7216200000;
+        var mobile = 7216500000;
 
         var create_btn = element(by.xpath('/html/body/div[1]/div[2]/div/div/div[2]/div/div/div[1]/div/form/div[5]/button'));
-
-        expect(create_btn.isEnabled()).toBeFalsy();
 
         element(by.model('user.userName')).clear().then(function() {
 

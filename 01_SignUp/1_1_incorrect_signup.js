@@ -4,7 +4,7 @@ describe("Sign Up: Incorrect", function () {
 
   it("Existing user should not be able to re-register", function () {
 
-      browser.get("http://staging.web.sminq.com");
+      browser.get("http://localhost:9000");
 
       browser.sleep(sleep_time);
 
