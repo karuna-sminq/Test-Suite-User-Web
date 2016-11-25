@@ -36,6 +36,8 @@ describe("Sign In: Incorrect", function () {
 
       expect(element(by.id('toast-container')).getText()).toContain('DOES NOT EXIST');
 
+      browser.sleep(sleep_time);
+
   });
 
 });
