@@ -24,7 +24,7 @@ describe("Sign Up: Incorrect", function () {
 
       element(by.model('user.phone')).sendKeys(mobile);
 
-      //T&C not checked -> Button should be disabled
+      //T&C checked -> Button should be enabled
       expect(create_btn.isEnabled()).toBeTruthy();
 
       create_btn.click();

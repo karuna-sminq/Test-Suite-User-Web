@@ -4,19 +4,19 @@ describe("Sign Up: Correct", function() {
 
     it("New User should be able to register for a new account", function() {
 
-        // browser.get("http://localhost:9000/#/");
-        //
-        // browser.sleep(sleep_time);
+        browser.get("http://staging.web.sminq.com");
 
-        element(by.css('a[href="#/login"]')).click();
+        browser.sleep(sleep_time);
+
+        element(by.css('a[href="/login?type=register"]')).click();
 
         browser.sleep(sleep_time);
 
         var name = "QATest2";
 
-        var mobile = 7216000000;
+        var mobile = 7216200000;
 
-        var create_btn = element(by.xpath('/html/body/div/div[2]/div/div/div[2]/div/div/div[1]/div/form/div[5]/button'));
+        var create_btn = element(by.xpath('/html/body/div[1]/div[2]/div/div/div[2]/div/div/div[1]/div/form/div[5]/button'));
 
         expect(create_btn.isEnabled()).toBeFalsy();
 
@@ -34,8 +34,8 @@ describe("Sign Up: Correct", function() {
 
         browser.sleep(sleep_time);
 
-        //T&C not checked -> Button should be disabled
-        expect(create_btn.isEnabled()).toBeFalsy();
+        //T&C checked -> Button should be enabled
+        expect(create_btn.isEnabled()).toBeTruthy();
 
         create_btn.click();
 
@@ -46,18 +46,19 @@ describe("Sign Up: Correct", function() {
 
         browser.sleep(sleep_time);
 
-        //Check for PIN field - not mandatory
-        expect(element(by.model('user.pin')).isEnabled()).toBeTruthy();
+        // //Check for PIN field - not mandatory
+        // expect(element(by.model('user.pin')).isEnabled()).toBeTruthy();
 
         element(by.model('user.pin')).sendKeys(1111);
 
         browser.sleep(sleep_time);
 
-        element(by.xpath('/html/body/div/div[2]/div/div/div[2]/div/div/div[1]/div/form/div[3]/button')).click();
+        //Sign Up
+        element(by.xpath('/html/body/div[1]/div[2]/div/div/div[2]/div/div/div[1]/div/form/div[4]/button')).click();
 
         browser.sleep(sleep_time);
 
-        expect(element(by.id('toast-container')).getText()).toContain('Registered');
+        expect(element(by.id('toast-container')).getText()).toContain('REGISTERED');
 
         browser.sleep(sleep_time);
 
