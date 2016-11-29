@@ -11,7 +11,7 @@ describe("Doctor/Clinic Page: ", function() {
         var queue_list = element.all(by.repeater('queue in queues track by $index'));
 
         queue_list.count().then(function(count) {
-            console.log(count);
+            // console.log(count);
             if (count > 1) {
 
                 var queue_name = element(by.id('queue-name')).getText();
@@ -47,9 +47,8 @@ describe("Doctor/Clinic Page: ", function() {
 
             }
 
-        });
+        }); //Queue List function
 
+    }); //it
 
-    });
-
-});
+}); //describe
