@@ -26,4 +26,20 @@ describe("Home Page:", function() {
 
     });
 
+    it("All Search Results should contain keyword searched for", function() {
+
+        var results = element.all(by.repeater('item in (filteredItems = (items | filter: customFilter)) track by $index'));
+
+        results.count().then(function(count) {
+            // console.log(count);
+            for (var i = 0; i < count - 1; i++) {
+                results.get(i).getText().then(function(value) {
+                    // console.log(value);
+                    expect(results.get(i).getText()).toMatch(keyword.toUpperCase());
+                });
+            }
+        });
+
+    });
+
 });
