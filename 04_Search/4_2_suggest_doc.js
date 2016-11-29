@@ -73,6 +73,11 @@ describe("Search Page: ", function () {
 
     expect(element(by.id('toast-container')).getText()).toContain('SENT');
 
+    //Back
+    browser.navigate().back();
+
+    browser.sleep(sleep_time);
+    
   });
 
 });

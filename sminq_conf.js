@@ -17,9 +17,8 @@ exports.config = {
         // '02_SignIn/2_2_correct_signin.js',
         // '03_Home/3_1_city_vertical_search.js',
         // '03_Home/3_2_keyword_search.js',
-        // '04_Search/4_1_search_keyword.js',
-        '04_Search/4_2_suggest_doc.js',
-        // '04_Search/4_3_join_queue.js',
+        // '04_Search/4_2_suggest_doc.js',
+        '04_Search/4_3_join_queue.js',
         // '05_Doctor_Clinic/5_1_doctor_schedule.js'
     ],
 
