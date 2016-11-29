@@ -25,7 +25,7 @@ describe("Doctor/Clinic Page: ", function() {
 
                 browser.sleep(sleep_time);
 
-                var q_name = element(by.xpath('/html/body/div/div[2]/div/div/div[2]/div[1]/div/h4')).getText();
+                var q_name = element(by.id('doctor-name-heading')).getText();
 
                 expect(queue_name).toEqual(q_name);
 
