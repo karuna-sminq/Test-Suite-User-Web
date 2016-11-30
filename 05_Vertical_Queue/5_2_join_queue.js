@@ -24,14 +24,21 @@ describe("Join Queue: ", function() {
         var live_token_list = element.all(by.repeater('liveToken in liveTokens track by $index'));
 
         live_token_list.count().then(function(count) {
+          console.log("COUNT ============== "+count);
 
-            for (var i = 0; i < count; i++) {
+            for (var i = 0; i <= count; i++) {
 
-                live_token_list.get(i).getText().then(function() {
+                live_token_list.get(i).getText().then(function(text) {
+
+                  console.log('LIVE TEXT ============= '+text);
 
                     element(by.id('queue-name')).getText().then(function(q_name) {
 
+                      console.log(queue_name+'================'+q_name);
+
                       expect(queue_name).toEqual(q_name);
+
+                      browser.sleep(sleep_time);
 
                     }); //inner getText function
 

@@ -4,9 +4,9 @@ describe("Search Page: ", function() {
 
     it("Join Queue - Clinic Name should match Clinic Dashboard", function() {
 
-        browser.get("http://localhost:9000");
-
-        browser.sleep(12000);
+        // browser.get("http://localhost:9000");
+        //
+        // browser.sleep(sleep_time);
 
         //Search
         element(by.id('search-input-button')).click();
