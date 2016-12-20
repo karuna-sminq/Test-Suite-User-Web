@@ -1,17 +1,17 @@
-describe("Home Page:", function() {
+describe("Home Page: Keyword Search", function() {
 
   var sleep_time = 3000;
 
-  var keyword = "hdfc";
+  var keyword = "shree";
 
-    it("Keyword Search should search through", function() {
+    it("should search through", function() {
 
       // browser.get("http://localhost:9000/#/");
       //
-      browser.sleep(sleep_time);
+      // browser.sleep(sleep_time);
 
       //Enter keyword name to search
-      element(by.model('keywordInput')).sendKeys(keyword);
+      element(by.model('searchStr')).sendKeys(keyword);
 
       browser.sleep(sleep_time);
 
@@ -20,22 +20,24 @@ describe("Home Page:", function() {
       browser.sleep(sleep_time);
 
       //Check for keyword searched
-      // expect(element(by.xpath('/html/body/div[1]/div[2]/div/div/div/div[3]/div[5]/div[1]')).getText()).toContain(keyword.toUpperCase());
-      //
+      expect(browser.getCurrentUrl()).toContain(keyword);
+
       // browser.navigate().back();
 
     });
 
     it("All Search Results should contain keyword searched for", function() {
 
-        var results = element.all(by.repeater('item in (filteredItems = (items | filter: customFilter)) track by $index'));
+        var results = element.all(by.repeater('item in (filteredItems = (items | filter: customFilter)) track by item.business'));
+
+        browser.sleep(sleep_time);
 
         results.count().then(function(count) {
-            // console.log(count);
+            console.log(count);
             for (var i = 0; i < count - 1; i++) {
                 results.get(i).getText().then(function(value) {
-                    // console.log(value);
-                    expect(results.get(i).getText()).toContain(keyword.toUpperCase());
+                    console.log(value);
+                    expect(results.get(i).getText()).toContain(keyword);
                 });
             }
         });
