@@ -4,7 +4,7 @@ describe("Join Queue: ", function() {
 
     it("Token booked should be visible in 'My Tokens'", function() {
 
-        var queue_name = element(by.xpath('/html/body/div[1]/div[2]/div/div/div/div/div[1]/div/h4')).getText();
+        var queue_name = element(by.xpath('//*[@id="doctor-name-heading"]')).getText();
 
         var timeslots = element.all(by.repeater('slot in timeslot.timeslots track by $index'));
 
@@ -13,12 +13,29 @@ describe("Join Queue: ", function() {
 
         browser.sleep(sleep_time);
 
-        expect(element(by.xpath('/html/body/div[4]/div[2]/div[1]/h5')).getText()).toMatch(/Join/);
-
-        //Confirm Booking
-        element(by.xpath('/html/body/div[4]/div[2]/div[1]/div/div/form/div[2]/button')).click();
+        //Login Flow:
+        element(by.id('phone-input')).sendKeys(7000000022);
 
         browser.sleep(sleep_time);
+
+        element(by.xpath('//*[@id="ngdialog1"]/div[2]/div/div/div/form/div[2]/button')).click();
+
+        browser.sleep(sleep_time);
+
+        element(by.model('newUser.pin')).sendKeys(1234);
+
+        browser.sleep(sleep_time);
+
+        element(by.xpath('//*[@id="ngdialog1"]/div[2]/div/div[2]/form/button')).click();
+
+        browser.sleep(sleep_time);
+
+        // expect(element(by.xpath('/html/body/div[4]/div[2]/div[1]/h5')).getText()).toMatch(/Join/);
+
+        //Confirm Booking
+        // element(by.xpath('/html/body/div[4]/div[2]/div[1]/div/div/form/div[2]/button')).click();
+        //
+        // browser.sleep(sleep_time);
 
         //Check for Token Booked
         var live_token_list = element.all(by.repeater('liveToken in liveTokens track by $index'));
