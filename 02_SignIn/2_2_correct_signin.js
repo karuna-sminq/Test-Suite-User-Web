@@ -4,11 +4,15 @@ describe("Sign In: Correct", function() {
 
     it("Existing user should be able to sign in", function() {
 
-        // browser.get("http://localhost:9000");
+        browser.get("http://staging.web.sminq.com/");
+
+        browser.sleep(sleep_time);
+
+        // element(by.xpath('/html/body/div[1]/div[2]/div/div/div[2]/div/ul/li[2]/a')).click();
         //
         // browser.sleep(sleep_time);
 
-        element(by.xpath('/html/body/div[1]/div[2]/div/div/div[2]/div/ul/li[2]/a')).click();
+        element(by.css('a[href="/login?type=login"]')).click();
 
         browser.sleep(sleep_time);
 

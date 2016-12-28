@@ -4,7 +4,7 @@ describe("Sign In: Incorrect", function () {
 
   it("New user should not be able to sign in without signing up first", function () {
 
-      browser.get("http://localhost:9000");
+      browser.get("http://staging.web.sminq.com/");
 
       browser.sleep(sleep_time);
 
