@@ -32,6 +32,26 @@ describe("Profile: Edit", function () {
 
   });
 
+    it("Email should be updated", function () {
+
+      element(by.model('editUser.user.userEmail')).clear();
+
+      element(by.model('editUser.user.userEmail')).sendKeys('karunal@sminq.com');
+
+      browser.sleep(sleep_time);
+
+      //Save
+      element(by.xpath('//*[@id="my-wrapper"]/div[2]/div/div/div/div[1]/div[1]/form/div[4]/div/button')).click();
+
+      browser.sleep(sleep_time);
+
+      //Check for Success
+      expect(element(by.id('toast-container')).getText()).toContain('UPDATED');
+
+      browser.sleep(sleep_time);
+
+    });
+
   it("Existing mobile number should not be updated", function () {
 
     //Existing Mobile Number
@@ -56,12 +76,12 @@ describe("Profile: Edit", function () {
 
   });
 
-  it("Non registered mobile number should be updated", function () {
+  xit("Non registered mobile number should be updated", function () {
 
     //Non-registered Mobile Number
     element(by.model('editUser.user.userMobile')).clear();
 
-    element(by.model('editUser.user.userMobile')).sendKeys('7000100001');
+    element(by.model('editUser.user.userMobile')).sendKeys('7000200001');
 
     browser.sleep(sleep_time);
 
@@ -83,7 +103,7 @@ describe("Profile: Edit", function () {
     browser.sleep(sleep_time);
 
     //Check for Success
-    expect(element(by.id('toast-container')).getText()).toContain('UPDATED');
+    expect(element(by.id('toast-container')).getText()).toContain('ERROR');
 
     browser.sleep(sleep_time);
 
