@@ -19,8 +19,8 @@ Updated on 2017-01-03
 '''
 
 echo "================================="
-echo "Sminq User Web v21 (Beta) ..."
-echo "Running Test Suite v1.0.4 ..."
+echo "Sminq User Web v26 (Beta) ..."
+echo "Running Test Suite v1.1 ..."
 echo "================================="
 
 d="$(date +'%d-%m-%Y')"
