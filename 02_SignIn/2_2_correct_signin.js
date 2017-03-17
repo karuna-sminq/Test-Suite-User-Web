@@ -28,9 +28,9 @@ describe("Sign In: Correct", function() {
         var login_btn = element(by.id('sign-in-button'));
 
         //Mobile
-        element(by.xpath('/html/body/div[1]/div[2]/div/div/div[2]/div/div/div[2]/div/form/div[1]/input')).clear().then(function() {
+        element(by.xpath('//*[@id="sign-in-form"]/div[1]/input')).clear().then(function() {
 
-            element(by.xpath('/html/body/div[1]/div[2]/div/div/div[2]/div/div/div[2]/div/form/div[1]/input')).sendKeys(mobile);
+            element(by.xpath('//*[@id="sign-in-form"]/div[1]/input')).sendKeys(mobile);
 
         });
 
@@ -39,13 +39,13 @@ describe("Sign In: Correct", function() {
         browser.sleep(sleep_time);
 
         //PIN
-        element(by.xpath('/html/body/div[1]/div[2]/div/div/div[2]/div/div/div[2]/div/form/div[2]/input')).clear().then(function() {
+        element(by.xpath('//*[@id="my-wrapper"]/div[3]/div/div/div[2]/div/div/div[2]/div/form/div[2]/input')).clear().then(function() {
 
-            element(by.xpath('/html/body/div[1]/div[2]/div/div/div[2]/div/div/div[2]/div/form/div[2]/input')).sendKeys(pin);
+            element(by.xpath('//*[@id="my-wrapper"]/div[3]/div/div/div[2]/div/div/div[2]/div/form/div[2]/input')).sendKeys(pin);
 
         });
 
-        var login_btn2 = element(by.xpath('/html/body/div[1]/div[2]/div/div/div[2]/div/div/div[2]/div/form/div[4]/button'));
+        var login_btn2 = element(by.xpath('//*[@id="my-wrapper"]/div[3]/div/div/div[2]/div/div/div[2]/div/form/div[4]/button'));
 
         //Valid Fields -> Button should be enabled
         expect(login_btn2.isEnabled()).toBeTruthy();
