@@ -4,22 +4,13 @@ describe("Sign In: Correct", function() {
 
     it("Existing user should be able to sign in", function() {
 
-        browser.get("http://staging.web.sminq.com/");
+        browser.get("http://staging.web.sminq.com");
 
         browser.sleep(sleep_time);
-
-        // element(by.xpath('/html/body/div[1]/div[2]/div/div/div[2]/div/ul/li[2]/a')).click();
-        //
-        // browser.sleep(sleep_time);
 
         element(by.css('a[href="/login?type=login"]')).click();
 
         browser.sleep(sleep_time);
-
-        // //Sign In Tab
-        // element(by.xpath('/html/body/div/div[2]/div/div/div[2]/div/ul/li[2]/a')).click();
-        //
-        // browser.sleep(sleep_time);
 
         var mobile = 7000000000;
 
@@ -45,13 +36,10 @@ describe("Sign In: Correct", function() {
 
         });
 
-        var login_btn2 = element(by.xpath('//*[@id="my-wrapper"]/div[3]/div/div/div[2]/div/div/div[2]/div/form/div[4]/button'));
+        var login_btn2 = element(by.xpath('//*[@id="sign-in-button"]'));
 
         //Valid Fields -> Button should be enabled
         expect(login_btn2.isEnabled()).toBeTruthy();
-
-        // //Alternate Check for OTP if PIN not set
-        // expect(element(by.model('otp')).isPresent()).toBeTruthy();
 
         login_btn2.click();
 
