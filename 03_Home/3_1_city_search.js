@@ -1,8 +1,8 @@
-describe("Home Page: City / Vertical Search", function() {
+describe("Home Page: City Search", function() {
 
     var sleep_time = 3000;
 
-    it("should display selected vertical listing", function() {
+    it("should display selected city listing", function() {
 
         browser.get("http://staging.web.sminq.com");
 
