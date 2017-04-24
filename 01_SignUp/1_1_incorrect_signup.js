@@ -4,11 +4,13 @@ describe("Sign Up: Incorrect", function () {
 
   it("Existing user should not be able to re-register", function () {
 
-      browser.get("http://localhost:9000");
+      browser.get("http://staging.web.sminq.com");
+
+      // browser.get("http://localhost:9000");
 
       browser.sleep(sleep_time);
 
-      element(by.css('a[href="/login?type=register"]')).click();
+      element(by.id('sign-up')).click();
 
       browser.sleep(sleep_time);
 
@@ -16,7 +18,7 @@ describe("Sign Up: Incorrect", function () {
 
       var mobile = 7000000000;
 
-      var create_btn = element(by.xpath('/html/body/div[1]/div[2]/div/div/div[2]/div/div/div[1]/div/form/div[5]/button'));
+      var create_btn = element(by.xpath('//*[@id="my-wrapper"]/div[3]/div/div/div[2]/div/div/div[1]/div/form/div[5]/button'));
 
       expect(create_btn.isEnabled()).toBeFalsy();
 
