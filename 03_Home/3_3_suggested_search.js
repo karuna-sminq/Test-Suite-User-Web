@@ -14,6 +14,8 @@ describe("Home Page: Suggested Search", function() {
         //Check for suggested searches
         expect(browser.getCurrentUrl()).toContain('specialist');
 
+        browser.navigate().back();
+
     });
 
 });

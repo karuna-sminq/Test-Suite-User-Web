@@ -17,7 +17,8 @@ exports.config = {
         // '02_SignIn/2_2_correct_signin.js',
         '03_Home/3_1_city_search.js',
         '03_Home/3_2_keyword_search.js',
-        '03_Home/3_3_suggested_search.js'
+        '03_Home/3_3_suggested_search.js',
+        '03_Home/3_4_autocomplete_search.js'
         // '04_Search/4_1_suggest_doc.js',
         // '04_Search/4_2_multi_queue.js',
         // '05_Vertical_Queue/5_1_queue_schedule.js',
@@ -38,6 +39,7 @@ exports.config = {
     // '03_Home/3_1_city_search.js',
     // '03_Home/3_2_keyword_search.js',
     // '03_Home/3_3_suggested_search.js',
+    // '03_Home/3_4_autocomplete_search.js',
     // '04_Search/4_1_suggest_doc.js',
     // '04_Search/4_2_multi_queue.js',
     // '05_Vertical_Queue/5_1_queue_schedule.js',
