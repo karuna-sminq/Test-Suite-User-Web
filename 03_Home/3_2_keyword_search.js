@@ -30,7 +30,7 @@ describe("Home Page: Keyword Search", function() {
             // console.log(count);
             for (var i = 0; i < count - 1; i++) {
                 results.get(i).getText().then(function(value) {
-                    console.log(value);
+                    // console.log(value);
                     expect(results.get(i).getText()).toContain(keyword);
                 });
             }
