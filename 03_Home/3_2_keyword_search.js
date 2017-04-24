@@ -1,7 +1,6 @@
 describe("Home Page: Keyword Search", function() {
 
   var sleep_time = 3000;
-
   var keyword = "shree";
 
     it("should search through", function() {
@@ -35,6 +34,8 @@ describe("Home Page: Keyword Search", function() {
                 });
             }
         });
+
+        browser.navigate().back();
 
     });
 

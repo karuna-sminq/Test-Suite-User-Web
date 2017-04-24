@@ -7,7 +7,6 @@ describe("Sign Up: Incorrect", function () {
       browser.get("http://staging.web.sminq.com");
 
       // browser.get("http://localhost:9000");
-
       browser.sleep(sleep_time);
 
       element(by.id('sign-up')).click();
