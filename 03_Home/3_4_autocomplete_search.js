@@ -16,17 +16,17 @@ describe("Home Page: Autocomplete Search", function() {
 
         });
 
-        // auto.get(0).getText().then(function(txt1){
-        //
-        //   // console.log(txt1);
-        //   clinic_title1 = txt1;
-        //
-        // });
-        //
-        // auto.get(0).click();
-        //
-        // browser.sleep(sleep_time);
-        //
+        auto.get(0).getText().then(function(txt1){
+
+          // console.log(txt1);
+          clinic_title1 = txt1;
+
+        });
+
+        auto.get(0).click();
+
+        browser.sleep(sleep_time);
+
         // var auto_searched = element.all(by.repeater('item in (filteredItems = (items | filter: customFilter)) track by item.business'));
         //
         // auto_searched.get(0).getText().then(function(txt2){
