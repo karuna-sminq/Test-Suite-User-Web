@@ -2,7 +2,7 @@ describe("Doctor/Clinic Page: ", function() {
 
     var sleep_time = 3000;
 
-    it("If multiple queues, show list of doctors", function() {
+    it("should display list of available timeslots for individual Doctor", function() {
 
         // browser.get("http://localhost:9000/#/");
         //

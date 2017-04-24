@@ -20,7 +20,8 @@ exports.config = {
         // '03_Home/3_3_suggested_search.js',
         // '03_Home/3_4_autocomplete_search.js',
         // '04_Search/4_1_suggest_doc.js',
-        '04_Search/4_2_multi_queue.js'
+        '04_Search/4_2_multi_queue.js',
+        '04_Search/4_3_check_availability.js'
         // '05_Vertical_Queue/5_1_queue_schedule.js',
         // '05_Vertical_Queue/5_2_join_queue.js',
         // '06_Profile/6_1_edit_profile.js',
@@ -42,6 +43,7 @@ exports.config = {
     // '03_Home/3_4_autocomplete_search.js',
     // '04_Search/4_1_suggest_doc.js',
     // '04_Search/4_2_multi_queue.js',
+    // '04_Search/4_3_check_availability.js',
     // '05_Vertical_Queue/5_1_queue_schedule.js',
     // '05_Vertical_Queue/5_2_join_queue.js'
 
