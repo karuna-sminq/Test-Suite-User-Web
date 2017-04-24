@@ -4,11 +4,6 @@ describe("Logout:", function () {
 
   it("should log the user out of his account", function () {
 
-    // //My Tokens
-    // element(by.xpath('/html/body/div[1]/div[1]/div/div[2]/div[2]/ul/li[2]/a')).click();
-    //
-    // browser.sleep(sleep_time);
-
     //My Account dropdown
     element(by.xpath('//*[@id="main-nav-bar"]/div[2]/ul/li[2]/a')).click();
 
