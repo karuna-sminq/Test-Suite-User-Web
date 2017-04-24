@@ -4,26 +4,21 @@ describe("Sign In: Incorrect", function () {
 
   it("New user should not be able to sign in without signing up first", function () {
 
-      browser.get("http://staging.web.sminq.com/");
-
-      browser.sleep(sleep_time);
+      // browser.get("http://staging.web.sminq.com");
+      //
+      // browser.sleep(sleep_time);
 
       element(by.css('a[href="/login?type=login"]')).click();
 
       browser.sleep(sleep_time);
 
-      // //Sign In Tab
-      // element(by.xpath('/html/body/div/div[2]/div/div/div[2]/div/ul/li[2]/a')).click();
-      //
-      // browser.sleep(sleep_time);
-
       var mobile = 7242234200;
 
-      var login_btn = element(by.id('sign-in-button'));
+      var login_btn = element(by.xpath('//*[@id="sign-in-button"]'));
 
       expect(login_btn.isEnabled()).toBeFalsy();
 
-      element(by.xpath('/html/body/div[1]/div[2]/div/div/div[2]/div/div/div[2]/div/form/div[1]/input')).sendKeys(mobile);
+      element(by.xpath('//*[@id="sign-in-form"]/div[1]/input')).sendKeys(mobile);
 
       browser.sleep(sleep_time);
 
