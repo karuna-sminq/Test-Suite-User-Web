@@ -8,11 +8,8 @@ describe("Doctor/Clinic Page: ", function() {
         //
         browser.sleep(sleep_time);
 
-        // browser.ignoreSynchronization = true;
-        // browser.switchTo().window(1);
-
         browser.get("http://staging.web.sminq.com/pune/clinics/shreenath-clinic/dr-s-s-ingle");
-        
+
         //Check for TimeGroups
         expect(element.all(by.repeater('timeslot in timeslotTab.content track by $index')).isDisplayed()).toBeTruthy();
 
