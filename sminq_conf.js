@@ -10,8 +10,8 @@ exports.config = {
         defaultTimeoutInterval: 2500000
     },
     specs: [
-        '01_SignUp/1_1_incorrect_signup.js'
-        // '01_SignUp/1_2_correct_signup.js',
+        // '01_SignUp/1_1_incorrect_signup.js',
+        '01_SignUp/1_2_correct_signup.js'
         // '01_SignUp/1_3_logout.js',
         // '02_SignIn/2_1_incorrect_signin.js',
         // '02_SignIn/2_2_correct_signin.js',

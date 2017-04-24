@@ -4,19 +4,19 @@ describe("Sign Up: Correct", function() {
 
     it("New User should be able to register for a new account", function() {
 
-        // browser.get("http://staging.web.sminq.com");
+        // browser.get("http://staging.web.sminq.com/login?type=login");
         //
         // browser.sleep(sleep_time);
 
-        element(by.xpath('/html/body/div[1]/div[2]/div/div/div[2]/div/ul/li[1]/a')).click();
+        element(by.id('sign-up-tab')).click();
 
         browser.sleep(sleep_time);
 
-        var name = "QATest2";
+        var name = "QATest4";
 
-        var mobile = 7216500000;
+        var mobile = 7216500002;
 
-        var create_btn = element(by.xpath('/html/body/div[1]/div[2]/div/div/div[2]/div/div/div[1]/div/form/div[5]/button'));
+        var create_btn = element(by.xpath('//*[@id="my-wrapper"]/div[3]/div/div/div[2]/div/div/div[1]/div/form/div[5]/button'));
 
         element(by.model('user.userName')).clear().then(function() {
 
@@ -44,15 +44,8 @@ describe("Sign Up: Correct", function() {
 
         browser.sleep(sleep_time);
 
-        // //Check for PIN field - not mandatory
-        // expect(element(by.model('user.pin')).isEnabled()).toBeTruthy();
-
-        element(by.model('user.pin')).sendKeys(1111);
-
-        browser.sleep(sleep_time);
-
         //Sign Up
-        element(by.xpath('/html/body/div[1]/div[2]/div/div/div[2]/div/div/div[1]/div/form/div[4]/button')).click();
+        element(by.xpath('//*[@id="my-wrapper"]/div[3]/div/div/div[2]/div/div/div[1]/div/form/div[3]/button')).click();
 
         browser.sleep(sleep_time);
 
