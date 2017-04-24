@@ -9,9 +9,17 @@ describe("Logout:", function () {
     //
     // browser.sleep(sleep_time);
 
+    //My Account dropdown
+    element(by.xpath('//*[@id="main-nav-bar"]/div[2]/ul/li[2]/a')).click();
+
+    browser.sleep(sleep_time);
+
     //Logout
-    // expect(element(by.xpath('/html/body/div[1]/div[1]/div/div[2]/div[2]/ul/li[5]/a/button')).isPresent()).toBeTruthy();
     element(by.css('[ng-click="logout()"]')).click();
+
+    browser.sleep(sleep_time);
+
+    element(by.xpath('//*[@id="ngdialog1"]/div[2]/div[2]/button')).click();
 
     browser.sleep(sleep_time);
 
