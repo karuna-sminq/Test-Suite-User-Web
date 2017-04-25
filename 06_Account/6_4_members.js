@@ -70,12 +70,7 @@ describe("Account - Family Members", function() {
 
     }); //it
 
-    it("should View existing family member details", function() {
-
-        //Members Tab
-        element(by.xpath('//*[@id="my-wrapper"]/div[3]/div/div/div[2]/div[1]/ul/li[4]')).click();
-
-        browser.sleep(sleep_time);
+    xit("should View existing family member details", function() {
 
         element(by.css('.member-username.clip-text.no-margin')).getText().then(function(n) {
 
@@ -114,7 +109,7 @@ describe("Account - Family Members", function() {
 
     });
 
-    it("should Edit existing Family Member details", function() {
+    xit("should Edit existing Family Member details", function() {
 
         element(by.model('member.updatename')).sendKeys(" edit");
 
@@ -142,6 +137,30 @@ describe("Account - Family Members", function() {
         });
 
         expect(upd1).toEqual(upd2);
+
+    });
+
+    it("should Delete existing Member", function() {
+
+        //Members Tab
+        element(by.xpath('//*[@id="my-wrapper"]/div[3]/div/div/div[2]/div[1]/ul/li[4]')).click();
+
+        browser.sleep(sleep_time);
+
+        //Delete
+        element(by.css('.delete-button')).click();
+
+        browser.sleep(sleep_time);
+
+        //Confirm
+        element(by.xpath('//*[@id="ngdialog1"]/div[2]/div[1]/div/div/form/div[2]/button')).click();
+
+        browser.sleep(sleep_time);
+
+        //Check for Success
+        expect(element(by.id('toast-container')).getText()).toContain('REMOVED');
+
+        browser.sleep(sleep_time);
 
     });
 
