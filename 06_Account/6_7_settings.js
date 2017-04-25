@@ -46,4 +46,40 @@ describe("Account - Settings", function() {
 
     });
 
+    it("should change user notifications' language", function() {
+
+        var lang = element.all(by.repeater('language in languages track by $index'));
+
+        lang.count().then(function(c) {
+
+            console.log("Languages:");
+
+            for (var i = 0; i < c; i++) {
+
+                lang.get(i).getText().then(function(l) {
+
+                    console.log("- " + l);
+
+                });
+
+            } //for
+
+        }); //lang
+
+        lang.get(0).click();
+
+        browser.sleep(sleep_time);
+
+        //Submit
+        element(by.xpath('//*[@id="my-wrapper"]/div[3]/div/div/div[2]/div[2]/div/div[7]/div/div/div/form/div/div[3]/div[2]/button')).click();
+
+        browser.sleep(sleep_time);
+
+        //Check for Success
+        expect(element(by.id('toast-container')).getText()).toContain('CHANGED');
+
+        browser.sleep(sleep_time);
+
+    });
+
 });
