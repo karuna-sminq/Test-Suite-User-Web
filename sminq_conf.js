@@ -27,7 +27,8 @@ exports.config = {
         '06_Account/6_1_edit_profile.js',
         // '06_Account/6_2_memberships.js',
         // '06_Account/6_3_registrations.js',
-        '06_Account/6_4_members.js'
+        // '06_Account/6_4_members.js',
+        '06_Account/6_5_bookmarks.js'
         // '07_Monetization/7_1_sub_online.js'
     ],
 
@@ -53,6 +54,7 @@ exports.config = {
     // '06_Account/6_2_memberships.js',
     // '06_Account/6_3_registrations.js'
     // '06_Account/6_4_members.js',
+    // '06_Account/6_5_bookmarks.js',
 
 
     /*= End of Spec files =*/
