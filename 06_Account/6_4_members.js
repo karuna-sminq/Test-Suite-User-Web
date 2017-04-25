@@ -3,6 +3,7 @@ describe("Account - Family Members", function() {
     var sleep_time = 3000;
     var name, name2;
     var num, num2;
+    var upd1, upd2;
 
     xit("should Add new family member", function() {
 
@@ -110,6 +111,37 @@ describe("Account - Family Members", function() {
         expect(num).toEqual(num2);
 
         browser.sleep(sleep_time);
+
+    });
+
+    it("should Edit existing Family Member details", function() {
+
+        element(by.model('member.updatename')).sendKeys(" edit");
+
+        browser.sleep(sleep_time);
+
+        element(by.model('member.updatename')).getText().then(function(n1) {
+
+            upd1 = n1;
+
+        });
+
+        element(by.xpath('//*[@id="ngdialog1"]/div[2]/div[1]/div/form/div[3]/div/button')).click();
+
+        browser.sleep(sleep_time);
+
+        //Check for Success
+        expect(element(by.id('toast-container')).getText()).toContain('MEMBER PROFILE UPDATED');
+
+        browser.sleep(sleep_time);
+
+        element(by.css('.member-username.clip-text.no-margin')).getText().then(function(n2) {
+
+            upd2 = n2;
+
+        });
+
+        expect(upd1).toEqual(upd2);
 
     });
 
