@@ -29,7 +29,8 @@ exports.config = {
         // '06_Account/6_3_registrations.js',
         // '06_Account/6_4_members.js',
         // '06_Account/6_5_bookmarks.js',
-        '06_Account/6_6_payment_history.js'
+        // '06_Account/6_6_payment_history.js',
+        '06_Account/6_7_settings.js'
         // '07_Monetization/7_1_sub_online.js'
     ],
 
@@ -56,7 +57,8 @@ exports.config = {
     // '06_Account/6_3_registrations.js'
     // '06_Account/6_4_members.js',
     // '06_Account/6_5_bookmarks.js',
-    // '06_Account/6_6_payment_history.js'
+    // '06_Account/6_6_payment_history.js',
+    // '06_Account/6_7_settings.js',
 
     /*= End of Spec files =*/
     /*=============================================<<<<<*/
