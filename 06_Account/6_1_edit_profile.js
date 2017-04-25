@@ -41,7 +41,7 @@ describe("Profile: Edit", function () {
 
   });
 
-    it("Email should be updated", function () {
+    xit("Email should be updated", function () {
 
       element(by.css('.profile-user-email')).click();
 
@@ -65,7 +65,7 @@ describe("Profile: Edit", function () {
 
     });
 
-  it("Existing mobile number should not be updated", function () {
+  xit("Existing mobile number should not be updated", function () {
 
     element(by.css('.profile-user-mobile')).click();
 
