@@ -1,8 +1,10 @@
 describe("Account - Family Members", function() {
 
     var sleep_time = 3000;
+    var name, name2;
+    var num, num2;
 
-    it("should Add new family member", function() {
+    xit("should Add new family member", function() {
 
         //Members Tab
         element(by.xpath('//*[@id="my-wrapper"]/div[3]/div/div/div[2]/div[1]/ul/li[4]')).click();
@@ -58,11 +60,56 @@ describe("Account - Family Members", function() {
 
         browser.sleep(sleep_time);
 
+        //Check for Verified
         element(by.xpath('//*[@id="my-wrapper"]/div[3]/div/div/div[2]/div[2]/div/div[4]/div/div/div[1]/div[1]/div[2]/div[3]/span')).getText().then(function(text) {
 
-          expect(text).toMatch(/verified/);
+            expect(text).toMatch(/verified/);
 
         });
+
+    }); //it
+
+    it("should View existing family member details", function() {
+
+        //Members Tab
+        element(by.xpath('//*[@id="my-wrapper"]/div[3]/div/div/div[2]/div[1]/ul/li[4]')).click();
+
+        browser.sleep(sleep_time);
+
+        element(by.css('.member-username.clip-text.no-margin')).getText().then(function(n) {
+
+            name = n;
+
+        });
+
+        element(by.css('.member-number.text-8.lighter.clip-text')).getText().then(function(no) {
+
+            num = no;
+
+        });
+
+        //Edit Member
+        element(by.xpath('//*[@id="my-wrapper"]/div[3]/div/div/div[2]/div[2]/div/div[4]/div/div/div[1]/div[2]/div/button[2]')).click();
+
+        browser.sleep(sleep_time);
+
+        element(by.model('member.updatename')).getText().then(function(n) {
+
+            name2 = n;
+
+        });
+
+        element(by.model('member.updatemobile')).getText().then(function(no) {
+
+            num2 = no;
+
+        });
+
+        expect(name).toEqual(name2);
+
+        expect(num).toEqual(num2);
+
+        browser.sleep(sleep_time);
 
     });
 
