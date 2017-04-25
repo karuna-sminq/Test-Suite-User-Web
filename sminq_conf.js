@@ -25,7 +25,8 @@ exports.config = {
         // '05_Book_Appt/5_1_queue_schedule.js',
         // '05_Book_Appt/5_2_join_queue.js',
         '06_Profile/6_1_edit_profile.js',
-        '06_Profile/6_2_memberships.js'
+        // '06_Profile/6_2_memberships.js',
+        '06_Profile/6_3_registrations.js'
         // '07_Monetization/7_1_sub_online.js'
     ],
 
@@ -48,7 +49,8 @@ exports.config = {
     // '05_Book_Appt/5_1_queue_schedule.js',
     // '05_Book_Appt/5_2_join_queue.js',
     // '06_Profile/6_1_edit_profile.js',
-    // '06_Profile/6_2_memberships.js'
+    // '06_Profile/6_2_memberships.js',
+    // '06_Profile/6_3_registrations.js'
 
 
     /*= End of Spec files =*/
